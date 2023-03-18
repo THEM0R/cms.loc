@@ -2,7 +2,8 @@
     "name": "admin/cms.loc",
     "autoload": {
         "psr-4": {
-            "Admin\\CmsLoc\\": "src/"
+            "Engine\\": "engine",
+            "Engine\\DI\\": "engine/DI"
         }
     },
     "authors": [

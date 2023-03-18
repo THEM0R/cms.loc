@@ -1,5 +1,2 @@
 <?php
-
-echo "Привіт";
-
-
+require_once 'engine/bootstrap.php';
