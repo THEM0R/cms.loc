@@ -11,9 +11,17 @@ use Engine\DI\DI;
 try { // try Тут виконується код
   // записуємо клас в $di
   $di = new DI();
+  // test
+  //$di->set('test',['db' => 'db_object']);
+  //$di->set('test2',['mail' => 'mail_object']);
 
-  $di->set('test',['db' => 'db_object']);
-  $di->set('test2',['mail' => 'mail_object']);
+  // підключення сервісів
+  $services = require __DIR__ . '/Config/Service.php';
+  // ініцілізація сервісів
+  foreach ($services as $service){
+    $provider = new $service($di);
+    $provider->init();
+  }
 
   // передаємо в конструктор CMS клас DI
   $cms = new Cms($di);

@@ -23,9 +23,9 @@ class Cms
    */
   public function run(){
 
-    $db = $this->di->get('test2');
+    //$db = $this->di->get('test2');
 
-    pr($db);
+    pr($this->di);
 
   }
 }
