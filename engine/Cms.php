@@ -22,6 +22,10 @@ class Cms
    * @return void
    */
   public function run(){
-    pr($this->di);
+
+    $db = $this->di->get('test2');
+
+    pr($db);
+
   }
 }
