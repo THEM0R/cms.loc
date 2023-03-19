@@ -9,10 +9,13 @@ class Router
    */
   private $routes = [];
 
+  private $dispatcher;
+
   /**
    * @var
    */
   private $host;
+
 
   /**
    * @param $host
@@ -36,6 +39,19 @@ class Router
       'controller' => $controller,
       'method' => $method
     ];
+  }
+
+  public function dispatch($method, $uri)
+  {
+
+  }
+
+  public function getDispatcher()
+  {
+    if ($this->dispatcher == null) {
+
+    }
+    return $this->dispatcher;
   }
 
 }

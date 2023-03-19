@@ -30,8 +30,8 @@ class Cms
 
     //pr($this->di);
 
-    $this->router->add('home', '/', 'HomeController:index');
-    $this->router->add('product', '/product/{id}', 'ProductController:index');
+    //$this->router->add('home', '/', 'HomeController:index');
+    //$this->router->add('product', '/product/{id}', 'ProductController:index');
 
     pr($this->di);
 
