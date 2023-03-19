@@ -22,6 +22,6 @@ class Cms
    * @return void
    */
   public function run(){
-    echo 'hello cms';
+    pr($this->di);
   }
 }

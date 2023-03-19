@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . "/../engine/dump.php";
 
 use Engine\Cms;
 use Engine\DI\DI;
@@ -10,6 +11,10 @@ use Engine\DI\DI;
 try { // try Тут виконується код
   // записуємо клас в $di
   $di = new DI();
+
+  $di->set('test',['db' => 'db_object']);
+  $di->set('test2',['mail' => 'mail_object']);
+
   // передаємо в конструктор CMS клас DI
   $cms = new Cms($di);
   //cms Запуск
